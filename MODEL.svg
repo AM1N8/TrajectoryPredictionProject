@@ -1,0 +1,115 @@
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f2f5;stop-opacity:1" />
+    </linearGradient>
+    <!-- Arrow marker definition -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444" />
+    </marker>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <rect width="1600" height="1000" fill="url(#bg-gradient)" />
+  
+  <!-- Title -->
+  <rect x="450" y="40" width="700" height="60" rx="30" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" filter="url(#shadow)" />
+  <text x="800" y="82" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#0d47a1">LiDAR-Enhanced Vehicle Trajectory Prediction</text>
+  
+  <!-- Input Section -->
+  <rect x="100" y="150" width="250" height="150" rx="15" fill="#e3f2fd" stroke="#2196f3" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="225" y="185" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#0d47a1">Vehicle Dynamics</text>
+  <text x="225" y="220" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Historical Trajectory</text>
+  <text x="225" y="250" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">(10 timesteps × 15 features)</text>
+  <text x="225" y="280" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-style="italic" fill="#555">Speed, Acceleration, Heading</text>
+  
+  <rect x="100" y="700" width="250" height="150" rx="15" fill="#e8f5e9" stroke="#4caf50" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="225" y="735" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#1b5e20">LiDAR Point Cloud</text>
+  <text x="225" y="770" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Environmental Context</text>
+  <text x="225" y="800" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">(1024 points × 4 features)</text>
+  <text x="225" y="830" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-style="italic" fill="#555">x, y, z, intensity</text>
+  
+  <!-- Encoders -->
+  <rect x="450" y="150" width="250" height="150" rx="15" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="575" y="185" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#1a237e">Sequence Encoder</text>
+  <text x="575" y="220" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Bidirectional LSTM</text>
+  <text x="575" y="250" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">with Attention</text>
+  <text x="575" y="280" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">(128 units → 64 units)</text>
+  
+  <rect x="450" y="700" width="250" height="150" rx="15" fill="#fff3e0" stroke="#ff9800" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="575" y="735" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#e65100">Point Cloud Encoder</text>
+  <text x="575" y="770" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">PointNet Architecture</text>
+  <text x="575" y="800" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">with Residual Connections</text>
+  <text x="575" y="830" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">(64 → 128 → 256 filters)</text>
+  
+  <!-- Feature Processing -->
+  <rect x="800" y="150" width="250" height="150" rx="15" fill="#e1f5fe" stroke="#03a9f4" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="925" y="185" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#01579b">Sequence Features</text>
+  <text x="925" y="220" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Temporal Context</text>
+  <text x="925" y="250" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Motion Patterns</text>
+  <text x="925" y="280" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">(256-dimensional vector)</text>
+  
+  <rect x="800" y="700" width="250" height="150" rx="15" fill="#fce4ec" stroke="#e91e63" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="925" y="735" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#880e4f">Point Cloud Features</text>
+  <text x="925" y="770" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Global Features</text>
+  <text x="925" y="800" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">(Max + Avg Pooling)</text>
+  <text x="925" y="830" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">(128-dimensional vector)</text>
+  
+  <!-- Feature Fusion -->
+  <rect x="625" y="425" width="250" height="150" rx="15" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="750" y="460" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#4a148c">Feature Fusion</text>
+  <text x="750" y="495" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Context-Aware Concatenation</text>
+  <text x="750" y="525" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">of Sequence and LiDAR Features</text>
+  <text x="750" y="555" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">(384-dimensional vector)</text>
+  
+  <!-- Dense Layer -->
+  <rect x="975" y="425" width="250" height="150" rx="15" fill="#ede7f6" stroke="#673ab7" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="1100" y="460" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#311b92">Dense Layers</text>
+  <text x="1100" y="495" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Fully Connected Neural Network</text>
+  <text x="1100" y="525" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">384 → 256 → 128 units</text>
+  <text x="1100" y="555" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">(BatchNorm, Dropout 0.3)</text>
+  
+  <!-- Output -->
+  <rect x="1330" y="340" width="170" height="320" rx="15" fill="#e0f2f1" stroke="#009688" stroke-width="2.5" filter="url(#shadow)" />
+  <text x="1415" y="380" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#004d40">Output</text>
+  <text x="1415" y="420" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#004d40">Trajectory</text>
+  <text x="1415" y="450" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#004d40">Prediction</text>
+  <text x="1415" y="490" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">(10 future</text>
+  <text x="1415" y="520" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">timesteps)</text>
+  <text x="1415" y="560" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Δx, Δy</text>
+  <text x="1415" y="590" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">displacements</text>
+  <text x="1415" y="620" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">Weighted Loss</text>
+  <text x="1415" y="640" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">Function</text>
+  
+  <!-- Loss Function Note -->
+  <rect x="1250" y="760" width="280" height="80" rx="15" fill="#ffebee" stroke="#f44336" stroke-width="2" stroke-dasharray="5,3" filter="url(#shadow)" />
+  <text x="1390" y="795" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#b71c1c">Training Objective</text>
+  <text x="1390" y="825" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#b71c1c">Weighted Displacement Error Loss</text>
+  
+  <!-- Arrows -->
+  <!-- Input to Encoders -->
+  <line x1="350" y1="225" x2="450" y2="225" stroke="#2196f3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+  <line x1="350" y1="775" x2="450" y2="775" stroke="#4caf50" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+  
+  <!-- Encoders to Features -->
+  <line x1="700" y1="225" x2="800" y2="225" stroke="#3f51b5" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+  <line x1="700" y1="775" x2="800" y2="775" stroke="#ff9800" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+  
+  <!-- Features to Fusion -->
+  <path d="M925,300 L925,375 Q925,425 875,425 L875,500" fill="none" stroke="#03a9f4" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+  <path d="M925,700 L925,650 Q925,600 875,600 L875,575" fill="none" stroke="#e91e63" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+  
+  <!-- Fusion to Dense -->
+  <line x1="875" y1="500" x2="975" y2="500" stroke="#9c27b0" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+  
+  <!-- Dense to Output -->
+  <line x1="1225" y1="500" x2="1330" y2="500" stroke="#673ab7" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+  
+  <!-- Training Connection -->
+  <path d="M1415,660 L1415,720 Q1415,750 1395,750 L1390,760" fill="none" stroke="#f44336" stroke-width="2.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)" />
+</svg>

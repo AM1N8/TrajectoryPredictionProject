@@ -1,4 +1,4 @@
-Vehicle Trajectory Prediction
+# Vehicle Trajectory Prediction
 
 ## Project Overview
 

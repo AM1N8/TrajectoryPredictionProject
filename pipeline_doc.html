@@ -1,0 +1,521 @@
+<!DOCTYPE html><html><head>
+      <title>pipeline_doc</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\moham\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="trajectory-prediction-pipeline-documentation">Trajectory Prediction Pipeline Documentation </h1>
+<h2 id="overview">Overview </h2>
+<p>This pipeline implements a sophisticated <strong>trajectory prediction system</strong> that combines LiDAR point cloud data with vehicle dynamics to predict future vehicle trajectories. The system uses a multi-modal deep learning approach, integrating PointNet-inspired architectures for point cloud processing with LSTM-based sequence modeling for temporal dynamics.</p>
+<h2 id="table-of-contents">Table of Contents </h2>
+<ol>
+<li><a href="#system-architecture">System Architecture</a></li>
+<li><a href="#data-processing-pipeline">Data Processing Pipeline</a></li>
+<li><a href="#model-architecture">Model Architecture</a></li>
+<li><a href="#training-process">Training Process</a></li>
+<li><a href="#evaluation-metrics">Evaluation Metrics</a></li>
+<li><a href="#usage-guide">Usage Guide</a></li>
+<li><a href="#api-reference">API Reference</a></li>
+<li><a href="#performance-analysis">Performance Analysis</a></li>
+</ol>
+<h2 id="system-architecture">System Architecture </h2>
+<p>The trajectory prediction system consists of four main components:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  Data Loading   │───▶│ Data Processing │───▶│ Model Training  │───▶│   Prediction    │
+│   &amp; Alignment   │    │  &amp; Feature Eng. │    │  &amp; Validation   │    │  &amp; Evaluation   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
+</code></pre><h3 id="key-features">Key Features </h3>
+<ul>
+<li><strong>Multi-modal Input</strong>: Combines LiDAR point clouds with vehicle dynamics</li>
+<li><strong>Relative Displacement Prediction</strong>: Predicts relative movements rather than absolute positions</li>
+<li><strong>Attention Mechanism</strong>: Uses self-attention for sequence modeling</li>
+<li><strong>Robust Point Cloud Processing</strong>: PointNet-inspired architecture with weighted sampling</li>
+<li><strong>Temporal Weighting</strong>: Custom loss function that prioritizes earlier predictions</li>
+</ul>
+<h2 id="data-processing-pipeline">Data Processing Pipeline </h2>
+<h3 id="1-data-sources">1. Data Sources </h3>
+<h4 id="vehicle-dynamics-data">Vehicle Dynamics Data </h4>
+<ul>
+<li><strong>Position</strong>: <code>x</code>, <code>y</code> coordinates</li>
+<li><strong>Velocity</strong>: <code>velocity_x</code>, <code>velocity_y</code> components</li>
+<li><strong>Control Inputs</strong>: <code>steering</code>, <code>throttle</code>, <code>brake</code></li>
+<li><strong>Timestamps</strong>: For temporal alignment</li>
+</ul>
+<h4 id="lidar-point-cloud-data">LiDAR Point Cloud Data </h4>
+<ul>
+<li><strong>Format</strong>: PLY files with XYZI format</li>
+<li><strong>Features</strong>: <code>x</code>, <code>y</code>, <code>z</code> coordinates + <code>intensity</code></li>
+<li><strong>Sampling</strong>: Fixed 1024 points per cloud</li>
+<li><strong>Processing</strong>: Normalized and centered</li>
+</ul>
+<h3 id="2-feature-engineering">2. Feature Engineering </h3>
+<h4 id="vehicle-dynamics-features">Vehicle Dynamics Features </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Computed features</span>
+<span class="token operator">-</span> speed<span class="token punctuation">:</span> √<span class="token punctuation">(</span>velocity_x² <span class="token operator">+</span> velocity_y²<span class="token punctuation">)</span>
+<span class="token operator">-</span> heading<span class="token punctuation">:</span> arctan2<span class="token punctuation">(</span>velocity_y<span class="token punctuation">,</span> velocity_x<span class="token punctuation">)</span>
+<span class="token operator">-</span> acceleration<span class="token punctuation">:</span> Δvelocity <span class="token operator">/</span> Δtime
+<span class="token operator">-</span> jerk<span class="token punctuation">:</span> Δacceleration <span class="token operator">/</span> Δtime
+<span class="token operator">-</span> heading_change<span class="token punctuation">:</span> Δheading <span class="token operator">/</span> Δtime
+<span class="token operator">-</span> curvature<span class="token punctuation">:</span> heading_change <span class="token operator">/</span> speed
+<span class="token operator">-</span> is_moving<span class="token punctuation">:</span> binary flag <span class="token keyword keyword-for">for</span> speed <span class="token operator">&gt;</span> threshold
+</code></pre><h4 id="relative-displacement-representation">Relative Displacement Representation </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Instead of absolute positions, use relative displacements</span>
+delta_x <span class="token operator">=</span> x<span class="token punctuation">[</span>t<span class="token punctuation">]</span> <span class="token operator">-</span> x<span class="token punctuation">[</span>t<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+delta_y <span class="token operator">=</span> y<span class="token punctuation">[</span>t<span class="token punctuation">]</span> <span class="token operator">-</span> y<span class="token punctuation">[</span>t<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+</code></pre><p><strong>Benefits of Relative Representation:</strong></p>
+<ul>
+<li><strong>Translation Invariant</strong>: Model learns movement patterns, not absolute locations</li>
+<li><strong>Better Generalization</strong>: Works across different environments</li>
+<li><strong>Reduced Complexity</strong>: Smaller numerical ranges improve training stability</li>
+</ul>
+<h3 id="3-data-filtering-and-segmentation">3. Data Filtering and Segmentation </h3>
+<h4 id="motion-filtering">Motion Filtering </h4>
+<ul>
+<li><strong>Minimum Speed</strong>: Filters out stationary periods (default: 0.5 m/s)</li>
+<li><strong>Segment Length</strong>: Ensures meaningful driving sequences (minimum: 5 timesteps)</li>
+<li><strong>Continuity</strong>: Prevents sequences from spanning multiple driving segments</li>
+</ul>
+<h4 id="point-cloud-processing">Point Cloud Processing </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">process_point_cloud</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> max_points<span class="token operator">=</span><span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 1. Weighted sampling (closer points prioritized)</span>
+    <span class="token comment"># 2. Robust centering using median</span>
+    <span class="token comment"># 3. Normalization using 90th percentile</span>
+    <span class="token comment"># 4. Intensity normalization to [0,1]</span>
+</code></pre><h2 id="model-architecture">Model Architecture </h2>
+<h3 id="overall-architecture">Overall Architecture </h3>
+<p>The model uses a <strong>multi-modal fusion approach</strong> combining two specialized encoders:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────┐    ┌─────────────────┐
+│ Sequence Input  │    │  LiDAR Input    │
+│  (seq_len, 13)  │    │  (1024, 4)      │
+└─────────┬───────┘    └─────────┬───────┘
+          │                      │
+          ▼                      ▼
+┌─────────────────┐    ┌─────────────────┐
+│ Sequence        │    │ Point Cloud     │
+│ Encoder         │    │ Encoder         │
+│ (BiLSTM +       │    │ (PointNet-      │
+│  Attention)     │    │  inspired)      │
+└─────────┬───────┘    └─────────┬───────┘
+          │                      │
+          └──────────┬───────────┘
+                     ▼
+           ┌─────────────────┐
+           │ Feature Fusion  │
+           │ &amp; Dense Layers  │
+           └─────────┬───────┘
+                     ▼
+           ┌─────────────────┐
+           │ Output Layer    │
+           │ (horizon × 2)   │
+           └─────────────────┘
+</code></pre><h3 id="1-point-cloud-encoder-pointnet-inspired">1. Point Cloud Encoder (PointNet-inspired) </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">build_point_cloud_encoder</span><span class="token punctuation">(</span>point_cloud_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Layer 1: Point-wise convolution</span>
+    x <span class="token operator">=</span> Conv1D<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">,</span> kernel_size<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>point_cloud_input<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> BatchNormalization<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    
+    <span class="token comment"># Layer 2: Residual block</span>
+    residual <span class="token operator">=</span> x
+    x <span class="token operator">=</span> Conv1D<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">,</span> kernel_size<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> BatchNormalization<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> Conv1D<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">,</span> kernel_size<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> Add<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token punctuation">,</span> residual<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># Layer 3-4: Feature extraction</span>
+    x <span class="token operator">=</span> Conv1D<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> kernel_size<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> Conv1D<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">,</span> kernel_size<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    
+    <span class="token comment"># Global feature aggregation</span>
+    global_max <span class="token operator">=</span> GlobalMaxPooling1D<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    global_avg <span class="token operator">=</span> GlobalAveragePooling1D<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    global_features <span class="token operator">=</span> Concatenate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">[</span>global_max<span class="token punctuation">,</span> global_avg<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># Dense embedding</span>
+    x <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>global_features<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    
+    <span class="token keyword keyword-return">return</span> x
+</code></pre><p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Point-wise Convolutions</strong>: Process each point independently</li>
+<li><strong>Residual Connections</strong>: Improve gradient flow</li>
+<li><strong>Global Aggregation</strong>: Combines max and average pooling</li>
+<li><strong>Permutation Invariant</strong>: Order of points doesn't matter</li>
+</ul>
+<h3 id="2-sequence-encoder-bilstm--attention">2. Sequence Encoder (BiLSTM + Attention) </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">build_sequence_encoder</span><span class="token punctuation">(</span>sequence_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Bidirectional LSTM layers</span>
+    x <span class="token operator">=</span> Bidirectional<span class="token punctuation">(</span>LSTM<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> return_sequences<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>sequence_input<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> Bidirectional<span class="token punctuation">(</span>LSTM<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">,</span> return_sequences<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    
+    <span class="token comment"># Self-attention mechanism</span>
+    attention_scores <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    attention_weights <span class="token operator">=</span> Softmax<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>Flatten<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>attention_scores<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># Apply attention</span>
+    context <span class="token operator">=</span> Dot<span class="token punctuation">(</span>axes<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">[</span>attention_weights<span class="token punctuation">,</span> x<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    last_step <span class="token operator">=</span> Lambda<span class="token punctuation">(</span><span class="token keyword keyword-lambda">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    
+    combined <span class="token operator">=</span> Concatenate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">[</span>context<span class="token punctuation">,</span> last_step<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> combined
+</code></pre><p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Bidirectional Processing</strong>: Captures both forward and backward temporal dependencies</li>
+<li><strong>Self-Attention</strong>: Focuses on most relevant timesteps</li>
+<li><strong>Context Vector</strong>: Weighted combination of all timesteps</li>
+<li><strong>Last Step Features</strong>: Preserves most recent state information</li>
+</ul>
+<h3 id="3-feature-fusion-and-output">3. Feature Fusion and Output </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Combine encoded features</span>
+combined <span class="token operator">=</span> Concatenate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">[</span>sequence_features<span class="token punctuation">,</span> point_cloud_features<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Dense layers for prediction</span>
+x <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>combined<span class="token punctuation">)</span>
+x <span class="token operator">=</span> BatchNormalization<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+x <span class="token operator">=</span> Dropout<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+x <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+
+<span class="token comment"># Output layer: predict relative displacements</span>
+output <span class="token operator">=</span> Dense<span class="token punctuation">(</span>prediction_horizon <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+output <span class="token operator">=</span> Reshape<span class="token punctuation">(</span><span class="token punctuation">(</span>prediction_horizon<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span>
+</code></pre><h3 id="4-custom-loss-function">4. Custom Loss Function </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">weighted_displacement_loss</span><span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Calculate Euclidean distance error</span>
+    distance_error <span class="token operator">=</span> sqrt<span class="token punctuation">(</span><span class="token punctuation">(</span>delta_x_true <span class="token operator">-</span> delta_x_pred<span class="token punctuation">)</span>² <span class="token operator">+</span> <span class="token punctuation">(</span>delta_y_true <span class="token operator">-</span> delta_y_pred<span class="token punctuation">)</span>²<span class="token punctuation">)</span>
+    
+    <span class="token comment"># Temporal weighting: earlier predictions weighted more heavily</span>
+    time_weights <span class="token operator">=</span> <span class="token number">1.0</span> <span class="token operator">/</span> sqrt<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> time_steps <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    time_weights <span class="token operator">=</span> normalize<span class="token punctuation">(</span>time_weights<span class="token punctuation">)</span>
+    
+    <span class="token comment"># Apply weights and return mean</span>
+    weighted_error <span class="token operator">=</span> distance_error <span class="token operator">*</span> time_weights
+    <span class="token keyword keyword-return">return</span> mean<span class="token punctuation">(</span>weighted_error<span class="token punctuation">)</span>
+</code></pre><p><strong>Rationale:</strong></p>
+<ul>
+<li><strong>Early Prediction Priority</strong>: Immediate future is more predictable and important</li>
+<li><strong>Distance-based</strong>: Focuses on spatial accuracy rather than component-wise errors</li>
+<li><strong>Normalization</strong>: Ensures weights sum to 1 for stable training</li>
+</ul>
+<h2 id="training-process">Training Process </h2>
+<h3 id="1-data-preparation">1. Data Preparation </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Sequence parameters</span>
+seq_length <span class="token operator">=</span> <span class="token number">10</span>          <span class="token comment"># History length</span>
+prediction_horizon <span class="token operator">=</span> <span class="token number">10</span>  <span class="token comment"># Future prediction length</span>
+
+<span class="token comment"># Create sequences</span>
+X_seq<span class="token punctuation">,</span> X_lidar<span class="token punctuation">,</span> y_seq <span class="token operator">=</span> prepare_relative_sequences<span class="token punctuation">(</span>
+    ego_df_filtered<span class="token punctuation">,</span> timestamp_to_lidar<span class="token punctuation">,</span> 
+    seq_length<span class="token punctuation">,</span> prediction_horizon
+<span class="token punctuation">)</span>
+</code></pre><h3 id="2-training-configuration">2. Training Configuration </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Optimizer and compilation</span>
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>
+    optimizer<span class="token operator">=</span>Adam<span class="token punctuation">(</span>learning_rate<span class="token operator">=</span><span class="token number">0.001</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    loss<span class="token operator">=</span>weighted_displacement_loss
+<span class="token punctuation">)</span>
+
+<span class="token comment"># Callbacks</span>
+callbacks <span class="token operator">=</span> <span class="token punctuation">[</span>
+    EarlyStopping<span class="token punctuation">(</span>monitor<span class="token operator">=</span><span class="token string">'val_loss'</span><span class="token punctuation">,</span> patience<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    ReduceLROnPlateau<span class="token punctuation">(</span>monitor<span class="token operator">=</span><span class="token string">'val_loss'</span><span class="token punctuation">,</span> factor<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> patience<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    ModelCheckpoint<span class="token punctuation">(</span><span class="token string">'best_model.h5'</span><span class="token punctuation">,</span> save_best_only<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</code></pre><h3 id="3-training-strategy">3. Training Strategy </h3>
+<ul>
+<li><strong>Batch Size</strong>: 32 (balances memory usage and gradient stability)</li>
+<li><strong>Validation Split</strong>: 10% of training data</li>
+<li><strong>Early Stopping</strong>: Prevents overfitting</li>
+<li><strong>Learning Rate Scheduling</strong>: Adaptive reduction on plateau</li>
+<li><strong>Model Checkpointing</strong>: Saves best performing model</li>
+</ul>
+<h2 id="evaluation-metrics">Evaluation Metrics </h2>
+<h3 id="1-primary-metrics">1. Primary Metrics </h3>
+<h4 id="displacement-error">Displacement Error </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>displacement_error <span class="token operator">=</span> √<span class="token punctuation">(</span><span class="token punctuation">(</span>x_pred <span class="token operator">-</span> x_true<span class="token punctuation">)</span>² <span class="token operator">+</span> <span class="token punctuation">(</span>y_pred <span class="token operator">-</span> y_true<span class="token punctuation">)</span>²<span class="token punctuation">)</span>
+</code></pre><ul>
+<li><strong>Mean Displacement Error</strong>: Average across all predictions</li>
+<li><strong>Final Displacement Error</strong>: Error at the end of prediction horizon</li>
+<li><strong>Speed-stratified Error</strong>: Performance at different speed ranges</li>
+</ul>
+<h4 id="path-smoothness">Path Smoothness </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Calculate path curvature changes</span>
+path_smoothness <span class="token operator">=</span> mean<span class="token punctuation">(</span>angle_changes_along_path<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>Lower values indicate smoother, more realistic trajectories</li>
+</ul>
+<h3 id="2-performance-analysis">2. Performance Analysis </h3>
+<h4 id="speed-based-evaluation">Speed-based Evaluation </h4>
+<ul>
+<li><strong>Low Speed (&lt; 5 m/s)</strong>: Urban/parking scenarios</li>
+<li><strong>Medium Speed (5-20 m/s)</strong>: City driving</li>
+<li><strong>High Speed (&gt; 20 m/s)</strong>: Highway driving</li>
+</ul>
+<h4 id="temporal-analysis">Temporal Analysis </h4>
+<ul>
+<li><strong>Short-term (1-3 steps)</strong>: Immediate future prediction accuracy</li>
+<li><strong>Medium-term (4-7 steps)</strong>: Intermediate planning horizon</li>
+<li><strong>Long-term (8-10 steps)</strong>: Extended prediction capability</li>
+</ul>
+<h2 id="usage-guide">Usage Guide </h2>
+<h3 id="1-training-a-new-model">1. Training a New Model </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Step 1: Load and process data</span>
+ego_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'ego_data.csv'</span><span class="token punctuation">)</span>
+ego_df_processed <span class="token operator">=</span> calculate_vehicle_dynamics<span class="token punctuation">(</span>ego_df<span class="token punctuation">)</span>
+ego_df_relative <span class="token operator">=</span> calculate_relative_displacement<span class="token punctuation">(</span>ego_df_processed<span class="token punctuation">)</span>
+ego_df_filtered <span class="token operator">=</span> filter_and_segment_data<span class="token punctuation">(</span>ego_df_relative<span class="token punctuation">)</span>
+
+<span class="token comment"># Step 2: Prepare sequences</span>
+timestamp_to_lidar <span class="token operator">=</span> map_timestamps_to_lidar<span class="token punctuation">(</span>ego_df_filtered<span class="token punctuation">,</span> lidar_path<span class="token punctuation">)</span>
+X_seq<span class="token punctuation">,</span> X_lidar<span class="token punctuation">,</span> y_seq<span class="token punctuation">,</span> scaler_input<span class="token punctuation">,</span> scaler_target<span class="token punctuation">,</span> segment_info <span class="token operator">=</span> prepare_relative_sequences<span class="token punctuation">(</span>
+    ego_df_filtered<span class="token punctuation">,</span> timestamp_to_lidar<span class="token punctuation">,</span> seq_length<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> prediction_horizon<span class="token operator">=</span><span class="token number">10</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment"># Step 3: Build and train model</span>
+model <span class="token operator">=</span> build_trajectory_prediction_model<span class="token punctuation">(</span>seq_length<span class="token punctuation">,</span> n_features<span class="token punctuation">,</span> n_lidar_features<span class="token punctuation">,</span> prediction_horizon<span class="token punctuation">)</span>
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>Adam<span class="token punctuation">(</span><span class="token number">0.001</span><span class="token punctuation">)</span><span class="token punctuation">,</span> loss<span class="token operator">=</span>weighted_displacement_loss<span class="token punctuation">)</span>
+history <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span><span class="token punctuation">[</span>X_seq<span class="token punctuation">,</span> X_lidar<span class="token punctuation">]</span><span class="token punctuation">,</span> y_seq<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">,</span> validation_split<span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Step 4: Save model and scalers</span>
+model<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'trajectory_model.h5'</span><span class="token punctuation">)</span>
+pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'input_scaler'</span><span class="token punctuation">:</span> scaler_input<span class="token punctuation">,</span> <span class="token string">'target_scaler'</span><span class="token punctuation">:</span> scaler_target<span class="token punctuation">}</span><span class="token punctuation">,</span> 
+           <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'scalers.pkl'</span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h3 id="2-making-predictions">2. Making Predictions </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Load trained model</span>
+model <span class="token operator">=</span> keras<span class="token punctuation">.</span>models<span class="token punctuation">.</span>load_model<span class="token punctuation">(</span><span class="token string">'trajectory_model.h5'</span><span class="token punctuation">,</span> 
+                                custom_objects<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'weighted_displacement_loss'</span><span class="token punctuation">:</span> weighted_displacement_loss<span class="token punctuation">}</span><span class="token punctuation">)</span>
+scalers <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'scalers.pkl'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Prepare input data</span>
+current_sequence <span class="token operator">=</span> prepare_current_sequence<span class="token punctuation">(</span>vehicle_state_history<span class="token punctuation">)</span>
+current_lidar <span class="token operator">=</span> process_current_lidar<span class="token punctuation">(</span>lidar_data<span class="token punctuation">)</span>
+
+<span class="token comment"># Normalize inputs</span>
+current_sequence_norm <span class="token operator">=</span> scalers<span class="token punctuation">[</span><span class="token string">'input_scaler'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>transform<span class="token punctuation">(</span>current_sequence<span class="token punctuation">)</span>
+
+<span class="token comment"># Predict trajectory</span>
+predicted_trajectory <span class="token operator">=</span> predict_future_trajectory<span class="token punctuation">(</span>
+    model<span class="token punctuation">,</span> current_sequence_norm<span class="token punctuation">,</span> current_lidar<span class="token punctuation">,</span> 
+    scalers<span class="token punctuation">[</span><span class="token string">'input_scaler'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> scalers<span class="token punctuation">[</span><span class="token string">'target_scaler'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    current_x<span class="token punctuation">,</span> current_y
+<span class="token punctuation">)</span>
+</code></pre><h3 id="3-real-time-implementation">3. Real-time Implementation </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">real_time_prediction_loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-while">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># Get current vehicle state</span>
+        current_state <span class="token operator">=</span> get_vehicle_state<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        current_lidar <span class="token operator">=</span> get_lidar_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        
+        <span class="token comment"># Update history buffer</span>
+        update_history_buffer<span class="token punctuation">(</span>current_state<span class="token punctuation">)</span>
+        
+        <span class="token comment"># Check if we have enough history</span>
+        <span class="token keyword keyword-if">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>history_buffer<span class="token punctuation">)</span> <span class="token operator">&gt;=</span> seq_length<span class="token punctuation">:</span>
+            <span class="token comment"># Make prediction</span>
+            predicted_path <span class="token operator">=</span> predict_future_trajectory<span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+            
+            <span class="token comment"># Use prediction for planning/control</span>
+            execute_trajectory_plan<span class="token punctuation">(</span>predicted_path<span class="token punctuation">)</span>
+        
+        <span class="token comment"># Sleep until next prediction cycle</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>prediction_interval<span class="token punctuation">)</span>
+</code></pre><h2 id="api-reference">API Reference </h2>
+<h3 id="core-functions">Core Functions </h3>
+<h4 id="data-processing">Data Processing </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">calculate_vehicle_dynamics</span><span class="token punctuation">(</span>ego_df<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Calculate enhanced vehicle dynamics features"""</span>
+    
+<span class="token keyword keyword-def">def</span> <span class="token function">calculate_relative_displacement</span><span class="token punctuation">(</span>ego_df<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Calculate relative displacements instead of absolute positions"""</span>
+    
+<span class="token keyword keyword-def">def</span> <span class="token function">filter_and_segment_data</span><span class="token punctuation">(</span>ego_df<span class="token punctuation">,</span> min_speed<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> min_segment_length<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Filter stationary data and segment into meaningful driving sequences"""</span>
+</code></pre><h4 id="point-cloud-processing-1">Point Cloud Processing </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">load_lidar_point_cloud</span><span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Load LiDAR point cloud from PLY file"""</span>
+    
+<span class="token keyword keyword-def">def</span> <span class="token function">sample_point_cloud</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> n_points<span class="token operator">=</span><span class="token number">1024</span><span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Sample a fixed number of points from point cloud"""</span>
+    
+<span class="token keyword keyword-def">def</span> <span class="token function">process_point_cloud</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> max_points<span class="token operator">=</span><span class="token number">1024</span><span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Process point cloud data with improved normalization"""</span>
+</code></pre><h4 id="model-building">Model Building </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">build_point_cloud_encoder</span><span class="token punctuation">(</span>point_cloud_input<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Build PointNet-inspired network for point cloud processing"""</span>
+    
+<span class="token keyword keyword-def">def</span> <span class="token function">build_sequence_encoder</span><span class="token punctuation">(</span>sequence_input<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Build sequence encoder with attention mechanism"""</span>
+    
+<span class="token keyword keyword-def">def</span> <span class="token function">build_trajectory_prediction_model</span><span class="token punctuation">(</span>seq_length<span class="token punctuation">,</span> n_features<span class="token punctuation">,</span> n_lidar_features<span class="token punctuation">,</span> prediction_horizon<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Build complete trajectory prediction model"""</span>
+</code></pre><h4 id="prediction-and-evaluation">Prediction and Evaluation </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">predict_future_trajectory</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> current_sequence<span class="token punctuation">,</span> current_lidar<span class="token punctuation">,</span> scaler_input<span class="token punctuation">,</span> scaler_target<span class="token punctuation">,</span> start_x<span class="token punctuation">,</span> start_y<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Predict future trajectory given current state"""</span>
+    
+<span class="token keyword keyword-def">def</span> <span class="token function">evaluate_model_performance</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> X_seq_test<span class="token punctuation">,</span> X_lidar_test<span class="token punctuation">,</span> y_test<span class="token punctuation">,</span> segment_info_test<span class="token punctuation">,</span> scaler_target<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""Evaluate model performance with advanced metrics"""</span>
+</code></pre><h3 id="inputoutput-specifications">Input/Output Specifications </h3>
+<h4 id="model-inputs">Model Inputs </h4>
+<ol>
+<li>
+<p><strong>Sequence Input</strong>: <code>(batch_size, seq_length, 13)</code></p>
+<ul>
+<li>Features: <code>[delta_x, delta_y, velocity_x, velocity_y, speed, heading, heading_change, curvature, acceleration_x, acceleration_y, acceleration, steering, throttle, brake, is_moving]</code></li>
+</ul>
+</li>
+<li>
+<p><strong>LiDAR Input</strong>: <code>(batch_size, 1024, 4)</code></p>
+<ul>
+<li>Features: <code>[x, y, z, intensity]</code> (normalized)</li>
+</ul>
+</li>
+</ol>
+<h4 id="model-output">Model Output </h4>
+<ul>
+<li><strong>Shape</strong>: <code>(batch_size, prediction_horizon, 2)</code></li>
+<li><strong>Content</strong>: Relative displacements <code>[delta_x, delta_y]</code> for each future timestep</li>
+</ul>
+<h2 id="performance-analysis">Performance Analysis </h2>
+<h3 id="typical-performance-metrics">Typical Performance Metrics </h3>
+<p>Based on CARLA simulation data:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean Displacement Error</td>
+<td>0.8-1.5 m</td>
+<td>Average prediction error</td>
+</tr>
+<tr>
+<td>Final Position Error</td>
+<td>1.2-2.5 m</td>
+<td>Error at end of horizon</td>
+</tr>
+<tr>
+<td>Low Speed Error (&lt; 5 m/s)</td>
+<td>0.5-1.0 m</td>
+<td>Urban scenarios</td>
+</tr>
+<tr>
+<td>High Speed Error (&gt; 20 m/s)</td>
+<td>1.5-3.0 m</td>
+<td>Highway scenarios</td>
+</tr>
+</tbody>
+</table>
+<h3 id="factors-affecting-performance">Factors Affecting Performance </h3>
+<h4 id="positive-factors">Positive Factors </h4>
+<ul>
+<li><strong>Consistent Driving Patterns</strong>: Regular acceleration/deceleration</li>
+<li><strong>Smooth Trajectories</strong>: Minimal sudden direction changes</li>
+<li><strong>Rich LiDAR Data</strong>: Dense, high-quality point clouds</li>
+<li><strong>Adequate History</strong>: Sufficient past observations</li>
+</ul>
+<h4 id="challenging-scenarios">Challenging Scenarios </h4>
+<ul>
+<li><strong>Sharp Turns</strong>: High curvature maneuvers</li>
+<li><strong>Stop-and-Go Traffic</strong>: Frequent speed changes</li>
+<li><strong>Sparse LiDAR</strong>: Limited environmental information</li>
+<li><strong>Weather/Lighting</strong>: Affecting LiDAR quality</li>
+</ul>
+<h3 id="model-limitations">Model Limitations </h3>
+<ol>
+<li><strong>Prediction Horizon</strong>: Accuracy degrades beyond 3-5 seconds</li>
+<li><strong>Novel Scenarios</strong>: Performance may decrease in unseen environments</li>
+<li><strong>Computational Requirements</strong>: Real-time processing needs optimization</li>
+<li><strong>Data Dependency</strong>: Requires high-quality synchronized LiDAR and vehicle data</li>
+</ol>
+<h3 id="optimization-strategies">Optimization Strategies </h3>
+<h4 id="model-architecture-1">Model Architecture </h4>
+<ul>
+<li><strong>Attention Mechanisms</strong>: Improve relevant feature selection</li>
+<li><strong>Temporal Convolutions</strong>: Alternative to LSTM for efficiency</li>
+<li><strong>Multi-scale Features</strong>: Different temporal resolutions</li>
+</ul>
+<h4 id="training-improvements">Training Improvements </h4>
+<ul>
+<li><strong>Data Augmentation</strong>: Synthetic trajectory variations</li>
+<li><strong>Curriculum Learning</strong>: Progressive difficulty training</li>
+<li><strong>Multi-task Learning</strong>: Simultaneous prediction of multiple objectives</li>
+</ul>
+<h4 id="deployment-optimization">Deployment Optimization </h4>
+<ul>
+<li><strong>Model Quantization</strong>: Reduce computational requirements</li>
+<li><strong>Pruning</strong>: Remove unnecessary connections</li>
+<li><strong>TensorRT/ONNX</strong>: Hardware-specific optimization</li>
+</ul>
+<h2 id="best-practices">Best Practices </h2>
+<h3 id="data-collection">Data Collection </h3>
+<ol>
+<li><strong>Synchronized Data</strong>: Ensure precise timestamp alignment</li>
+<li><strong>Diverse Scenarios</strong>: Include various driving conditions</li>
+<li><strong>Quality Control</strong>: Filter out corrupted or incomplete data</li>
+<li><strong>Balanced Dataset</strong>: Represent different speeds and maneuvers</li>
+</ol>
+<h3 id="model-training">Model Training </h3>
+<ol>
+<li><strong>Cross-Validation</strong>: Use different routes/environments for validation</li>
+<li><strong>Hyperparameter Tuning</strong>: Systematic search for optimal parameters</li>
+<li><strong>Regularization</strong>: Prevent overfitting with dropout and batch normalization</li>
+<li><strong>Monitoring</strong>: Track multiple metrics during training</li>
+</ol>
+<h3 id="deployment">Deployment </h3>
+<ol>
+<li><strong>Latency Requirements</strong>: Ensure predictions meet real-time constraints</li>
+<li><strong>Failure Handling</strong>: Graceful degradation when data is unavailable</li>
+<li><strong>Continuous Learning</strong>: Update model with new data</li>
+<li><strong>Safety Margins</strong>: Account for prediction uncertainty</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements </h2>
+<h3 id="technical-improvements">Technical Improvements </h3>
+<ul>
+<li><strong>Uncertainty Quantification</strong>: Provide confidence intervals with predictions</li>
+<li><strong>Multi-modal Sensor Fusion</strong>: Integrate camera, radar, and GPS data</li>
+<li><strong>Graph Neural Networks</strong>: Model vehicle interactions explicitly</li>
+<li><strong>Transformer Architecture</strong>: Replace LSTM with attention-based models</li>
+</ul>
+<h3 id="application-extensions">Application Extensions </h3>
+<ul>
+<li><strong>Multi-agent Prediction</strong>: Predict trajectories of surrounding vehicles</li>
+<li><strong>Interactive Prediction</strong>: Account for ego vehicle's influence on others</li>
+<li><strong>Hierarchical Planning</strong>: Connect with higher-level route planning</li>
+<li><strong>Safety-aware Prediction</strong>: Incorporate collision avoidance constraints</li>
+</ul>
+<p>This trajectory prediction pipeline represents a sophisticated approach to autonomous vehicle motion prediction, combining the strengths of deep learning with domain-specific insights about vehicle dynamics and environmental perception.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

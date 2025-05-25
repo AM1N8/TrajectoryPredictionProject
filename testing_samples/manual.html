@@ -1,0 +1,569 @@
+<!DOCTYPE html><html><head>
+      <title>manual</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\moham\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="carla-test-sequence-generator---manual">CARLA Test Sequence Generator - Manual </h1>
+<h2 id="overview">Overview </h2>
+<p>The CARLA Test Sequence Generator is a Python script designed to process collected CARLA simulation data and organize it into structured test sequences for trajectory prediction models. The script takes raw CARLA data (ego vehicle CSV files and LiDAR point clouds) and creates organized folders containing sequential data chunks suitable for machine learning model training and evaluation.</p>
+<h2 id="table-of-contents">Table of Contents </h2>
+<ol>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#input-data-format">Input Data Format</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#command-line-arguments">Command Line Arguments</a></li>
+<li><a href="#output-structure">Output Structure</a></li>
+<li><a href="#data-processing-pipeline">Data Processing Pipeline</a></li>
+<li><a href="#configuration-options">Configuration Options</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#api-reference">API Reference</a></li>
+</ol>
+<h2 id="purpose">Purpose </h2>
+<p>This tool is specifically designed for researchers and developers working on autonomous vehicle trajectory prediction models. It bridges the gap between raw CARLA simulation data and structured datasets ready for machine learning workflows.</p>
+<p><strong>Primary Use Cases:</strong></p>
+<ul>
+<li>Creating test datasets for trajectory prediction models</li>
+<li>Organizing time-series data for sequence-to-sequence learning</li>
+<li>Preparing data for model evaluation and benchmarking</li>
+<li>Generating consistent train/validation/test splits</li>
+</ul>
+<h2 id="requirements">Requirements </h2>
+<h3 id="system-requirements">System Requirements </h3>
+<ul>
+<li>Python 3.7 or higher</li>
+<li>Minimum 4GB RAM (8GB+ recommended for large datasets)</li>
+<li>Sufficient disk space (approximately 2x the size of input data)</li>
+</ul>
+<h3 id="python-dependencies">Python Dependencies </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>pandas<span class="token operator">&gt;=</span><span class="token number">1.3</span>.0
+numpy<span class="token operator">&gt;=</span><span class="token number">1.20</span>.0
+</code></pre><h3 id="optional-dependencies">Optional Dependencies </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>matplotlib<span class="token operator">&gt;=</span><span class="token number">3.3</span>.0  <span class="token comment"># For data visualization</span>
+seaborn<span class="token operator">&gt;=</span><span class="token number">0.11</span>.0    <span class="token comment"># For enhanced plotting</span>
+</code></pre><h2 id="installation">Installation </h2>
+<ol>
+<li>
+<p><strong>Clone or download the script:</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">wget</span> https://your-repository/carla_test_generator.py
+</code></pre></li>
+<li>
+<p><strong>Install required dependencies:</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>pip <span class="token function">install</span> pandas numpy
+</code></pre></li>
+<li>
+<p><strong>Make the script executable (Linux/macOS):</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">chmod</span> +x carla_test_generator.py
+</code></pre></li>
+</ol>
+<h2 id="input-data-format">Input Data Format </h2>
+<p>The script expects data collected using the CARLA Data Collection Script with the following structure:</p>
+<h3 id="required-input-structure">Required Input Structure </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>carla_data/
+├── ego_data_YYYYMMDD_HHMMSS.csv    # Ego vehicle data
+├── lane_data_YYYYMMDD_HHMMSS.csv   # Lane data (optional)
+└── lidar/                          # LiDAR directory
+    ├── lidar_123.456789.ply
+    ├── lidar_123.556789.ply
+    └── ...
+</code></pre><h3 id="ego-data-csv-format">Ego Data CSV Format </h3>
+<p>The ego data CSV must contain the following columns:</p>
+<ul>
+<li><code>timestamp</code>: Simulation timestamp (float)</li>
+<li><code>x</code>, <code>y</code>, <code>z</code>: Vehicle position coordinates</li>
+<li><code>steering</code>: Steering input (-1 to 1)</li>
+<li><code>throttle</code>: Throttle input (0 to 1)</li>
+<li><code>brake</code>: Brake input (0 to 1)</li>
+<li><code>yaw</code>: Vehicle yaw angle (degrees)</li>
+<li><code>heading</code>: Vehicle heading (degrees)</li>
+<li><code>velocity_x</code>, <code>velocity_y</code>, <code>velocity_z</code>: Velocity components</li>
+<li><code>accel_x</code>, <code>accel_y</code>, <code>accel_z</code>: Acceleration components</li>
+</ul>
+<h3 id="lidar-data-format">LiDAR Data Format </h3>
+<ul>
+<li><strong>File Format</strong>: PLY (Polygon File Format)</li>
+<li><strong>Naming Convention</strong>: <code>lidar_&lt;timestamp&gt;.ply</code></li>
+<li><strong>Content</strong>: Point cloud data with X, Y, Z coordinates and intensity values</li>
+</ul>
+<h2 id="usage">Usage </h2>
+<h3 id="basic-usage">Basic Usage </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>python carla_test_generator.py --data-dir /path/to/carla_data
+</code></pre><h3 id="advanced-usage">Advanced Usage </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>python carla_test_generator.py <span class="token punctuation">\</span>
+    --data-dir ./carla_data <span class="token punctuation">\</span>
+    --output-dir ./test_sequences <span class="token punctuation">\</span>
+    --sequence-length <span class="token number">15</span> <span class="token punctuation">\</span>
+    --prediction-length <span class="token number">8</span> <span class="token punctuation">\</span>
+    --step-size <span class="token number">3</span> <span class="token punctuation">\</span>
+    --min-velocity <span class="token number">2.0</span>
+</code></pre><h2 id="command-line-arguments">Command Line Arguments </h2>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--data-dir</code></td>
+<td>string</td>
+<td><strong>Required</strong></td>
+<td>Path to directory containing CARLA data</td>
+</tr>
+<tr>
+<td><code>--output-dir</code></td>
+<td>string</td>
+<td><code>./test_sequences</code></td>
+<td>Output directory for generated sequences</td>
+</tr>
+<tr>
+<td><code>--sequence-length</code></td>
+<td>int</td>
+<td><code>10</code></td>
+<td>Number of past data points per sequence</td>
+</tr>
+<tr>
+<td><code>--prediction-length</code></td>
+<td>int</td>
+<td><code>10</code></td>
+<td>Number of future points to predict</td>
+</tr>
+<tr>
+<td><code>--step-size</code></td>
+<td>int</td>
+<td><code>5</code></td>
+<td>Step size between sequences (controls overlap)</td>
+</tr>
+<tr>
+<td><code>--min-velocity</code></td>
+<td>float</td>
+<td><code>0.5</code></td>
+<td>Minimum velocity threshold (m/s)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="argument-details">Argument Details </h3>
+<h4 id="-data-dir-required"><code>--data-dir</code> (Required) </h4>
+<ul>
+<li>Specifies the input directory containing CARLA data</li>
+<li>Must contain at least one <code>ego_data_*.csv</code> file and a <code>lidar/</code> subdirectory</li>
+<li>Example: <code>--data-dir /home/user/carla_experiments/session_001</code></li>
+</ul>
+<h4 id="-output-dir"><code>--output-dir</code> </h4>
+<ul>
+<li>Destination directory for generated test sequences</li>
+<li>Will be created if it doesn't exist</li>
+<li>Example: <code>--output-dir ./my_test_data</code></li>
+</ul>
+<h4 id="-sequence-length"><code>--sequence-length</code> </h4>
+<ul>
+<li>Number of historical data points to include in each sequence</li>
+<li>These serve as input to your prediction model</li>
+<li>Range: 1-1000 (practical range: 5-50)</li>
+<li>Example: <code>--sequence-length 20</code> for 20 past states</li>
+</ul>
+<h4 id="-prediction-length"><code>--prediction-length</code> </h4>
+<ul>
+<li>Number of future data points to predict</li>
+<li>These serve as ground truth for model evaluation</li>
+<li>Range: 1-100 (practical range: 5-30)</li>
+<li>Example: <code>--prediction-length 15</code> to predict 15 future positions</li>
+</ul>
+<h4 id="-step-size"><code>--step-size</code> </h4>
+<ul>
+<li>Controls overlap between consecutive sequences</li>
+<li>Smaller values create more sequences with more overlap</li>
+<li>Larger values create fewer sequences with less overlap</li>
+<li>Example: <code>--step-size 1</code> for maximum overlap, <code>--step-size 10</code> for minimal overlap</li>
+</ul>
+<h4 id="-min-velocity"><code>--min-velocity</code> </h4>
+<ul>
+<li>Filters out stationary or slow-moving periods</li>
+<li>Helps focus on dynamic driving scenarios</li>
+<li>Set to <code>0.0</code> to include all data</li>
+<li>Example: <code>--min-velocity 1.0</code> to exclude data below 1 m/s</li>
+</ul>
+<h2 id="output-structure">Output Structure </h2>
+<p>The script generates a hierarchical directory structure optimized for machine learning workflows:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>test_sequences/
+├── dataset_summary.json           # Overall dataset statistics
+├── sequence_000000/              # First test sequence
+│   ├── past/
+│   │   └── ego_data.csv          # Past ego vehicle states (input)
+│   ├── lidar/
+│   │   ├── lidar_000.ply        # Corresponding LiDAR frames
+│   │   ├── lidar_001.ply
+│   │   └── ... (sequence_length files)
+│   ├── ground_truth/
+│   │   └── ego_data_future.csv   # Future states (ground truth)
+│   └── metadata.json            # Sequence-specific information
+├── sequence_000005/              # Second test sequence (step_size=5)
+│   └── ... (same structure)
+└── ...
+</code></pre><h3 id="file-descriptions">File Descriptions </h3>
+<h4 id="dataset_summaryjson"><code>dataset_summary.json</code> </h4>
+<p>Contains overall dataset statistics and metadata:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"dataset_info"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"source_data_dir"</span><span class="token operator">:</span> <span class="token string">"/path/to/carla_data"</span><span class="token punctuation">,</span>
+    <span class="token property">"output_dir"</span><span class="token operator">:</span> <span class="token string">"/path/to/test_sequences"</span><span class="token punctuation">,</span>
+    <span class="token property">"generation_time"</span><span class="token operator">:</span> <span class="token string">"2024-01-15T10:30:45"</span><span class="token punctuation">,</span>
+    <span class="token property">"total_sequences"</span><span class="token operator">:</span> <span class="token number">245</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"sequence_parameters"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"past_length"</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token property">"prediction_length"</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token property">"step_size"</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">"min_velocity_filter"</span><span class="token operator">:</span> <span class="token number">0.5</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"data_statistics"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"total_ego_records"</span><span class="token operator">:</span> <span class="token number">2500</span><span class="token punctuation">,</span>
+    <span class="token property">"total_lidar_files"</span><span class="token operator">:</span> <span class="token number">2500</span><span class="token punctuation">,</span>
+    <span class="token property">"avg_velocity"</span><span class="token operator">:</span> <span class="token number">8.7</span><span class="token punctuation">,</span>
+    <span class="token property">"max_velocity"</span><span class="token operator">:</span> <span class="token number">25.3</span><span class="token punctuation">,</span>
+    <span class="token property">"time_span"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"start"</span><span class="token operator">:</span> <span class="token number">123.456</span><span class="token punctuation">,</span>
+      <span class="token property">"end"</span><span class="token operator">:</span> <span class="token number">373.456</span><span class="token punctuation">,</span>
+      <span class="token property">"duration"</span><span class="token operator">:</span> <span class="token number">250.0</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="sequence_xxxxxxmetadatajson"><code>sequence_XXXXXX/metadata.json</code> </h4>
+<p>Contains sequence-specific information:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"sequence_id"</span><span class="token operator">:</span> <span class="token string">"sequence_000000"</span><span class="token punctuation">,</span>
+  <span class="token property">"past_length"</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  <span class="token property">"prediction_length"</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  <span class="token property">"past_timestamps"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">123.456</span><span class="token punctuation">,</span> <span class="token number">123.556</span><span class="token punctuation">,</span> ...<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"future_timestamps"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">124.556</span><span class="token punctuation">,</span> <span class="token number">124.656</span><span class="token punctuation">,</span> ...<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"start_position"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">"x"</span><span class="token operator">:</span> <span class="token number">100.5</span><span class="token punctuation">,</span> <span class="token property">"y"</span><span class="token operator">:</span> <span class="token number">200.3</span><span class="token punctuation">,</span> <span class="token property">"z"</span><span class="token operator">:</span> <span class="token number">0.5</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"end_position"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">"x"</span><span class="token operator">:</span> <span class="token number">150.2</span><span class="token punctuation">,</span> <span class="token property">"y"</span><span class="token operator">:</span> <span class="token number">180.7</span><span class="token punctuation">,</span> <span class="token property">"z"</span><span class="token operator">:</span> <span class="token number">0.5</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"avg_velocity"</span><span class="token operator">:</span> <span class="token number">12.4</span><span class="token punctuation">,</span>
+  <span class="token property">"total_distance"</span><span class="token operator">:</span> <span class="token number">65.8</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="pastego_datacsv"><code>past/ego_data.csv</code> </h4>
+<p>Input data for your prediction model, containing the same columns as the original ego data but limited to the sequence length.</p>
+<h4 id="ground_truthego_data_futurecsv"><code>ground_truth/ego_data_future.csv</code> </h4>
+<p>Ground truth data for model evaluation, containing future vehicle states.</p>
+<h4 id="lidarlidar_xxxply"><code>lidar/lidar_XXX.ply</code> </h4>
+<p>Numbered LiDAR point cloud files corresponding to each past timestamp.</p>
+<h2 id="data-processing-pipeline">Data Processing Pipeline </h2>
+<p>The script follows a systematic data processing pipeline:</p>
+<h3 id="1-data-discovery-phase">1. Data Discovery Phase </h3>
+<ul>
+<li>Scans input directory for ego data CSV files</li>
+<li>Locates LiDAR directory and enumerates PLY files</li>
+<li>Validates data format and completeness</li>
+</ul>
+<h3 id="2-data-loading-phase">2. Data Loading Phase </h3>
+<ul>
+<li>Loads ego vehicle CSV data into memory</li>
+<li>Calculates derived metrics (velocity magnitude)</li>
+<li>Applies velocity filtering if specified</li>
+</ul>
+<h3 id="3-timestamp-synchronization">3. Timestamp Synchronization </h3>
+<ul>
+<li>Extracts timestamps from LiDAR filenames</li>
+<li>Matches LiDAR data to closest ego data timestamps</li>
+<li>Filters out unmatched or poorly synchronized data</li>
+</ul>
+<h3 id="4-sequence-generation">4. Sequence Generation </h3>
+<ul>
+<li>Creates sliding windows of specified length</li>
+<li>Generates overlapping sequences based on step size</li>
+<li>Validates sequence completeness</li>
+</ul>
+<h3 id="5-file-organization">5. File Organization </h3>
+<ul>
+<li>Creates directory structure for each sequence</li>
+<li>Copies and organizes relevant data files</li>
+<li>Generates metadata and summary files</li>
+</ul>
+<h2 id="configuration-options">Configuration Options </h2>
+<h3 id="sequence-length-optimization">Sequence Length Optimization </h3>
+<p><strong>Short Sequences (5-10 points):</strong></p>
+<ul>
+<li>Faster processing and training</li>
+<li>Less memory usage</li>
+<li>May miss long-term patterns</li>
+<li>Good for real-time applications</li>
+</ul>
+<p><strong>Medium Sequences (10-20 points):</strong></p>
+<ul>
+<li>Balanced approach (recommended)</li>
+<li>Captures most driving patterns</li>
+<li>Reasonable computational requirements</li>
+</ul>
+<p><strong>Long Sequences (20+ points):</strong></p>
+<ul>
+<li>Captures complex maneuvers</li>
+<li>Higher memory and processing requirements</li>
+<li>May include irrelevant historical data</li>
+</ul>
+<h3 id="step-size-strategy">Step Size Strategy </h3>
+<p><strong>Small Step Size (1-3):</strong></p>
+<ul>
+<li>Maximum data utilization</li>
+<li>High sequence overlap</li>
+<li>Larger datasets</li>
+<li>Risk of overfitting due to similarity</li>
+</ul>
+<p><strong>Medium Step Size (3-7):</strong></p>
+<ul>
+<li>Good balance (recommended)</li>
+<li>Moderate overlap</li>
+<li>Diverse sequences</li>
+</ul>
+<p><strong>Large Step Size (10+):</strong></p>
+<ul>
+<li>Independent sequences</li>
+<li>Smaller datasets</li>
+<li>May miss important transitions</li>
+</ul>
+<h3 id="velocity-filtering">Velocity Filtering </h3>
+<p><strong>Conservative Filtering (0.1-0.5 m/s):</strong></p>
+<ul>
+<li>Includes most driving scenarios</li>
+<li>May include parking/stationary periods</li>
+</ul>
+<p><strong>Standard Filtering (0.5-2.0 m/s):</strong></p>
+<ul>
+<li>Focuses on active driving</li>
+<li>Excludes most stationary periods</li>
+<li>Recommended for most applications</li>
+</ul>
+<p><strong>Aggressive Filtering (2.0+ m/s):</strong></p>
+<ul>
+<li>Highway and dynamic scenarios only</li>
+<li>Excludes urban low-speed driving</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting </h2>
+<h3 id="common-issues">Common Issues </h3>
+<h4 id="no-ego-data-csv-files-found">"No ego data CSV files found" </h4>
+<p><strong>Cause:</strong> Incorrect data directory or missing files<br>
+<strong>Solution:</strong></p>
+<ul>
+<li>Verify the data directory path</li>
+<li>Ensure ego_data_*.csv files exist</li>
+<li>Check file permissions</li>
+</ul>
+<h4 id="lidar-directory-not-found">"LiDAR directory not found" </h4>
+<p><strong>Cause:</strong> Missing lidar subdirectory<br>
+<strong>Solution:</strong></p>
+<ul>
+<li>Verify lidar/ directory exists in data directory</li>
+<li>Check directory name spelling (case-sensitive)</li>
+</ul>
+<h4 id="not-enough-data-points">"Not enough data points" </h4>
+<p><strong>Cause:</strong> Insufficient data for requested sequence parameters<br>
+<strong>Solution:</strong></p>
+<ul>
+<li>Reduce sequence_length or prediction_length</li>
+<li>Check if data collection was complete</li>
+<li>Verify min_velocity isn't too restrictive</li>
+</ul>
+<h4 id="error-matching-lidar-to-ego-data">"Error matching LiDAR to ego data" </h4>
+<p><strong>Cause:</strong> Timestamp synchronization issues<br>
+<strong>Solution:</strong></p>
+<ul>
+<li>Check LiDAR filename format</li>
+<li>Verify timestamp consistency</li>
+<li>Reduce timestamp tolerance in code if needed</li>
+</ul>
+<h4 id="memory-errors">Memory errors </h4>
+<p><strong>Cause:</strong> Large datasets exceeding available RAM<br>
+<strong>Solution:</strong></p>
+<ul>
+<li>Process data in smaller batches</li>
+<li>Increase system memory</li>
+<li>Use step_size to reduce sequence count</li>
+</ul>
+<h3 id="performance-optimization">Performance Optimization </h3>
+<h4 id="for-large-datasets">For Large Datasets </h4>
+<ol>
+<li>Use larger step sizes to reduce sequence count</li>
+<li>Apply stricter velocity filtering</li>
+<li>Process data in chunks</li>
+<li>Use SSD storage for faster I/O</li>
+</ol>
+<h4 id="for-memory-constrained-systems">For Memory-Constrained Systems </h4>
+<ol>
+<li>Reduce sequence length</li>
+<li>Process sequences individually</li>
+<li>Use data streaming instead of loading all data</li>
+</ol>
+<h2 id="examples">Examples </h2>
+<h3 id="example-1-basic-test-set-generation">Example 1: Basic Test Set Generation </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Generate standard test sequences</span>
+python carla_test_generator.py --data-dir ./carla_data
+</code></pre><ul>
+<li>Creates sequences with 10 past + 10 future points</li>
+<li>5-point step size (50% overlap)</li>
+<li>Filters velocities below 0.5 m/s</li>
+</ul>
+<h3 id="example-2-high-density-sequence-generation">Example 2: High-Density Sequence Generation </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Maximum overlap for comprehensive coverage</span>
+python carla_test_generator.py <span class="token punctuation">\</span>
+    --data-dir ./carla_data <span class="token punctuation">\</span>
+    --step-size <span class="token number">1</span> <span class="token punctuation">\</span>
+    --min-velocity <span class="token number">0.1</span>
+</code></pre><ul>
+<li>Creates maximum number of sequences</li>
+<li>Minimal filtering</li>
+<li>Suitable for data augmentation</li>
+</ul>
+<h3 id="example-3-highway-scenario-focus">Example 3: Highway Scenario Focus </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Focus on high-speed scenarios</span>
+python carla_test_generator.py <span class="token punctuation">\</span>
+    --data-dir ./highway_data <span class="token punctuation">\</span>
+    --min-velocity <span class="token number">15.0</span> <span class="token punctuation">\</span>
+    --sequence-length <span class="token number">15</span> <span class="token punctuation">\</span>
+    --prediction-length <span class="token number">20</span>
+</code></pre><ul>
+<li>Filters for highway speeds (&gt;15 m/s ≈ 54 km/h)</li>
+<li>Longer sequences for complex maneuvers</li>
+<li>Extended prediction horizon</li>
+</ul>
+<h3 id="example-4-real-time-model-testing">Example 4: Real-Time Model Testing </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Optimize for real-time applications</span>
+python carla_test_generator.py <span class="token punctuation">\</span>
+    --data-dir ./carla_data <span class="token punctuation">\</span>
+    --sequence-length <span class="token number">5</span> <span class="token punctuation">\</span>
+    --prediction-length <span class="token number">5</span> <span class="token punctuation">\</span>
+    --step-size <span class="token number">10</span>
+</code></pre><ul>
+<li>Short sequences for fast inference</li>
+<li>Non-overlapping sequences</li>
+<li>Suitable for embedded systems</li>
+</ul>
+<h2 id="best-practices">Best Practices </h2>
+<h3 id="data-quality">Data Quality </h3>
+<ol>
+<li><strong>Validate Input Data:</strong> Always check data completeness before processing</li>
+<li><strong>Timestamp Consistency:</strong> Ensure LiDAR and ego data timestamps align</li>
+<li><strong>Velocity Filtering:</strong> Use appropriate thresholds for the intended scenario</li>
+<li><strong>Data Balance:</strong> Consider temporal and spatial diversity in sequences</li>
+</ol>
+<h3 id="model-development">Model Development </h3>
+<ol>
+<li><strong>Train/Validation Split:</strong> Use different CARLA sessions for training and testing</li>
+<li><strong>Sequence Independence:</strong> Avoid overlap between train and test sequences</li>
+<li><strong>Scenario Diversity:</strong> Include various weather, lighting, and traffic conditions</li>
+<li><strong>Ground Truth Quality:</strong> Verify future trajectory accuracy</li>
+</ol>
+<h3 id="performance">Performance </h3>
+<ol>
+<li><strong>Batch Processing:</strong> Process multiple datasets together for efficiency</li>
+<li><strong>Parallel Processing:</strong> Consider parallelizing sequence generation for large datasets</li>
+<li><strong>Storage Optimization:</strong> Use appropriate file formats and compression</li>
+<li><strong>Memory Management:</strong> Monitor memory usage with large datasets</li>
+</ol>
+<h3 id="reproducibility">Reproducibility </h3>
+<ol>
+<li><strong>Document Parameters:</strong> Save configuration parameters with datasets</li>
+<li><strong>Version Control:</strong> Track script versions and modifications</li>
+<li><strong>Random Seeds:</strong> Set consistent seeds for reproducible results</li>
+<li><strong>Environment Recording:</strong> Document Python and dependency versions</li>
+</ol>
+<h2 id="api-reference">API Reference </h2>
+<h3 id="carlatestsequencegenerator-class">CARLATestSequenceGenerator Class </h3>
+<h4 id="constructor">Constructor </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>CARLATestSequenceGenerator<span class="token punctuation">(</span>args<span class="token punctuation">)</span>
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>args</code>: Namespace object containing configuration parameters</li>
+</ul>
+<h4 id="key-methods">Key Methods </h4>
+<h5 id="find_data_files"><code>find_data_files()</code> </h5>
+<p>Locates and validates input data files.<br>
+<strong>Returns:</strong> <code>bool</code> - Success status</p>
+<h5 id="load_ego_data"><code>load_ego_data()</code> </h5>
+<p>Loads ego vehicle data from CSV and applies filtering.<br>
+<strong>Returns:</strong> <code>bool</code> - Success status</p>
+<h5 id="match_lidar_to_ego_data"><code>match_lidar_to_ego_data()</code> </h5>
+<p>Synchronizes LiDAR files with ego data timestamps.<br>
+<strong>Returns:</strong> <code>bool</code> - Success status</p>
+<h5 id="create_test_sequences"><code>create_test_sequences()</code> </h5>
+<p>Generates test sequences and organizes output files.<br>
+<strong>Returns:</strong> <code>bool</code> - Success status</p>
+<h5 id="run"><code>run()</code> </h5>
+<p>Executes the complete processing pipeline.<br>
+<strong>Returns:</strong> <code>bool</code> - Overall success status</p>
+<h3 id="utility-functions">Utility Functions </h3>
+<h4 id="create_summary_filenum_sequences"><code>create_summary_file(num_sequences)</code> </h4>
+<p>Generates dataset summary with statistics and metadata.</p>
+<h4 id="create_test_sequences-1"><code>create_test_sequences()</code> </h4>
+<p>Core sequence generation logic with file organization.</p>
+<h3 id="error-handling">Error Handling </h3>
+<p>The script implements comprehensive error handling:</p>
+<ul>
+<li><strong>File I/O Errors:</strong> Handles missing files and permission issues</li>
+<li><strong>Data Format Errors:</strong> Validates CSV structure and content</li>
+<li><strong>Memory Errors:</strong> Provides guidance for large dataset processing</li>
+<li><strong>Timestamp Errors:</strong> Manages synchronization issues</li>
+</ul>
+<h2 id="changelog">Changelog </h2>
+<h3 id="version-100">Version 1.0.0 </h3>
+<ul>
+<li>Initial release</li>
+<li>Basic sequence generation functionality</li>
+<li>CSV and LiDAR data processing</li>
+<li>Metadata generation</li>
+</ul>
+<h3 id="future-enhancements">Future Enhancements </h3>
+<ul>
+<li>Multi-threading support for faster processing</li>
+<li>Advanced filtering options (lane changes, intersections)</li>
+<li>Integration with other CARLA sensors (cameras, radar)</li>
+<li>Automatic train/validation/test splitting</li>
+<li>Data visualization tools</li>
+<li>Support for other simulation platforms</li>
+</ul>
+<h2 id="support-and-contributing">Support and Contributing </h2>
+<p>For issues, questions, or contributions:</p>
+<ol>
+<li>Check the troubleshooting section</li>
+<li>Verify your data format matches requirements</li>
+<li>Test with provided examples</li>
+<li>Document any modifications for reproducibility</li>
+</ol>
+<p>Remember to backup your original data before processing and validate generated sequences before using them for model training.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

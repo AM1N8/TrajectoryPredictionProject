@@ -33,7 +33,6 @@ The system uses CARLA simulator data consisting of:
 #### 3. Trajectory Prediction
 - **Multi-Step Prediction**: Forecasts vehicle positions across multiple future timesteps
 - **Weighted Loss Function**: Prioritizes accuracy in near-future predictions
-- **Steering Calculation**: Converts predicted paths into steering commands using a bicycle model
 
 #### 4. Evaluation System
 - **Speed-Stratified Analysis**: Evaluates performance at different vehicle speeds
@@ -71,4 +70,4 @@ The system demonstrates:
 - Smooth trajectory generation suitable for comfortable vehicle control
 - Effective integration of environmental context from LiDAR data
 
-The visualizations produced by the system illustrate the comparison between predicted and actual vehicle paths, along with corresponding steering commands.
+The visualizations produced by the system illustrate the comparison between predicted and actual vehicle paths.

@@ -1,0 +1,350 @@
+<!DOCTYPE html><html><head>
+      <title>CARLA Dataset Column Definitions</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\moham\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<p>This document provides descriptions for each column in the CSV files generated by the CARLA simulator that are used in the visualization notebook.</p>
+<h2 id="ego-vehicle-data-ego_data_csv">Ego Vehicle Data (<code>ego_data_*.csv</code>) </h2>
+<p>This dataset contains information about the ego (player-controlled) vehicle at each timestamp.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timestamp</code></td>
+<td>float</td>
+<td>Simulation time in seconds</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>float</td>
+<td>X-coordinate of the vehicle in the world (meters)</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>float</td>
+<td>Y-coordinate of the vehicle in the world (meters)</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>float</td>
+<td>Z-coordinate of the vehicle in the world (height, meters)</td>
+</tr>
+<tr>
+<td><code>velocity_x</code></td>
+<td>float</td>
+<td>Velocity component along the X-axis (m/s)</td>
+</tr>
+<tr>
+<td><code>velocity_y</code></td>
+<td>float</td>
+<td>Velocity component along the Y-axis (m/s)</td>
+</tr>
+<tr>
+<td><code>velocity_z</code></td>
+<td>float</td>
+<td>Velocity component along the Z-axis (m/s)</td>
+</tr>
+<tr>
+<td><code>accel_x</code></td>
+<td>float</td>
+<td>Acceleration component along the X-axis (m/s²)</td>
+</tr>
+<tr>
+<td><code>accel_y</code></td>
+<td>float</td>
+<td>Acceleration component along the Y-axis (m/s²)</td>
+</tr>
+<tr>
+<td><code>accel_z</code></td>
+<td>float</td>
+<td>Acceleration component along the Z-axis (m/s²)</td>
+</tr>
+<tr>
+<td><code>heading</code></td>
+<td>float</td>
+<td>Heading direction of the vehicle in degrees (0-360°, where 0° is East)</td>
+</tr>
+<tr>
+<td><code>yaw</code></td>
+<td>float</td>
+<td>Yaw rotation angle of the vehicle in degrees</td>
+</tr>
+<tr>
+<td><code>pitch</code></td>
+<td>float</td>
+<td>Pitch rotation angle of the vehicle in degrees</td>
+</tr>
+<tr>
+<td><code>roll</code></td>
+<td>float</td>
+<td>Roll rotation angle of the vehicle in degrees</td>
+</tr>
+<tr>
+<td><code>steering</code></td>
+<td>float</td>
+<td>Steering angle of the vehicle's wheels (-1.0 to 1.0, where negative is left)</td>
+</tr>
+<tr>
+<td><code>throttle</code></td>
+<td>float</td>
+<td>Throttle input value (0.0 to 1.0)</td>
+</tr>
+<tr>
+<td><code>brake</code></td>
+<td>float</td>
+<td>Brake input value (0.0 to 1.0)</td>
+</tr>
+<tr>
+<td><code>handbrake</code></td>
+<td>boolean</td>
+<td>Handbrake state (1 for engaged, 0 for disengaged)</td>
+</tr>
+<tr>
+<td><code>gear</code></td>
+<td>integer</td>
+<td>Current gear of the vehicle transmission</td>
+</tr>
+<tr>
+<td><code>speed</code></td>
+<td>float</td>
+<td>Calculated total speed magnitude (derived in visualization code, not in raw data)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lane-data-lane_data_csv">Lane Data (<code>lane_data_*.csv</code>) </h2>
+<p>This dataset contains information about the lane geometry and properties.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timestamp</code></td>
+<td>float</td>
+<td>Simulation time in seconds</td>
+</tr>
+<tr>
+<td><code>lane_id</code></td>
+<td>integer</td>
+<td>Unique identifier for each lane</td>
+</tr>
+<tr>
+<td><code>waypoint_x</code></td>
+<td>float</td>
+<td>X-coordinate of the lane waypoint (meters)</td>
+</tr>
+<tr>
+<td><code>waypoint_y</code></td>
+<td>float</td>
+<td>Y-coordinate of the lane waypoint (meters)</td>
+</tr>
+<tr>
+<td><code>waypoint_z</code></td>
+<td>float</td>
+<td>Z-coordinate of the lane waypoint (height, meters)</td>
+</tr>
+<tr>
+<td><code>lane_width</code></td>
+<td>float</td>
+<td>Width of the lane at this waypoint (meters)</td>
+</tr>
+<tr>
+<td><code>is_junction</code></td>
+<td>boolean</td>
+<td>Whether this waypoint is in a junction/intersection (1 for true, 0 for false)</td>
+</tr>
+<tr>
+<td><code>is_drivable</code></td>
+<td>boolean</td>
+<td>Whether this lane is drivable (1 for true, 0 for false)</td>
+</tr>
+<tr>
+<td><code>lane_type</code></td>
+<td>string</td>
+<td>Type of lane (e.g., 'driving', 'shoulder', 'median', etc.)</td>
+</tr>
+<tr>
+<td><code>lane_change</code></td>
+<td>string</td>
+<td>Lane change permissions at this waypoint (e.g., 'none', 'left', 'right', 'both')</td>
+</tr>
+<tr>
+<td><code>lane_marking_type</code></td>
+<td>string</td>
+<td>Type of lane marking (e.g., 'solid', 'broken', 'botts dots', etc.)</td>
+</tr>
+<tr>
+<td><code>lane_marking_color</code></td>
+<td>string</td>
+<td>Color of lane marking (e.g., 'white', 'yellow', etc.)</td>
+</tr>
+<tr>
+<td><code>left_lane_id</code></td>
+<td>integer</td>
+<td>ID of the lane to the left (-1 if none)</td>
+</tr>
+<tr>
+<td><code>right_lane_id</code></td>
+<td>integer</td>
+<td>ID of the lane to the right (-1 if none)</td>
+</tr>
+<tr>
+<td><code>next_waypoint_id</code></td>
+<td>integer</td>
+<td>ID of the next waypoint in this lane (-1 if end of lane)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="spatial-points-spatial_points_csv">Spatial Points (<code>spatial_points_*.csv</code>) </h2>
+<p>This dataset contains information about various points in the environment, often used to represent the drivable area around the vehicle.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timestamp</code></td>
+<td>float</td>
+<td>Simulation time in seconds</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>float</td>
+<td>X-coordinate of the point in the world (meters)</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>float</td>
+<td>Y-coordinate of the point in the world (meters)</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>float</td>
+<td>Z-coordinate of the point in the world (height, meters)</td>
+</tr>
+<tr>
+<td><code>is_drivable</code></td>
+<td>boolean</td>
+<td>Whether this point is on a drivable surface (1 for true, 0 for false)</td>
+</tr>
+<tr>
+<td><code>distance_to_vehicle</code></td>
+<td>float</td>
+<td>Distance from this point to the ego vehicle (meters)</td>
+</tr>
+<tr>
+<td><code>surface_type</code></td>
+<td>string</td>
+<td>Type of surface at this point (e.g., 'road', 'sidewalk', 'grass', etc.)</td>
+</tr>
+<tr>
+<td><code>friction</code></td>
+<td>float</td>
+<td>Road friction coefficient at this point (unitless)</td>
+</tr>
+<tr>
+<td><code>roughness</code></td>
+<td>float</td>
+<td>Surface roughness value (unitless)</td>
+</tr>
+<tr>
+<td><code>elevation</code></td>
+<td>float</td>
+<td>Relative elevation compared to road level (meters)</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>string</td>
+<td>Category of the area (e.g., 'road', 'offroad', 'sidewalk', etc.)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="computedderived-values">Computed/Derived Values </h2>
+<p>These values are not directly in the CSV files but are calculated during visualization:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>speed</code></td>
+<td>Total scalar speed calculated from velocity components (√(velocity_x² + velocity_y² + velocity_z²))</td>
+</tr>
+<tr>
+<td><code>accel_total</code></td>
+<td>Total scalar acceleration calculated from acceleration components (√(accel_x² + accel_y² + accel_z²))</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-relationships">Data Relationships </h2>
+<ul>
+<li>Each dataset has a <code>timestamp</code> column that can be used to synchronize data across files</li>
+<li>The ego vehicle position (<code>x</code>, <code>y</code>, <code>z</code>) can be related to lane waypoints and spatial points to determine vehicle position relative to road infrastructure</li>
+<li>Lane IDs provide structure for the road network, with relationships between adjacent lanes specified through <code>left_lane_id</code> and <code>right_lane_id</code></li>
+</ul>
+<h2 id="use-in-visualization">Use in Visualization </h2>
+<p>The visualization notebook uses these datasets to create:</p>
+<ol>
+<li>2D trajectory plots showing the vehicle path colored by speed</li>
+<li>Spatial point visualizations showing drivable and non-drivable areas</li>
+<li>Lane geometry visualizations showing the road network</li>
+<li>Vehicle dynamics plots showing time-series data of speed, acceleration, and steering</li>
+<li>Animated visualizations showing the vehicle moving through the environment</li>
+</ol>
+<h2 id="notes-on-data-collection">Notes on Data Collection </h2>
+<ul>
+<li>Data is typically collected at regular intervals during CARLA simulation runs</li>
+<li>Files are named with timestamps in the format <code>{data_type}_{YYYYMMDD_HHMMSS}.csv</code></li>
+<li>The most recent dataset is loaded by default if no specific timestamp is provided</li>
+<li>All spatial coordinates use a right-handed coordinate system where X points forward, Y points right, and Z points up</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
